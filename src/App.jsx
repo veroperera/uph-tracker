@@ -22,7 +22,7 @@ const exportarExcel = (sesiones, empleadoFiltro = null) => {
   const datos = empleadoFiltro ? sesiones.filter((s) => s.empleadoId === empleadoFiltro) : sesiones;
   if (!datos.length) return alert("No hay sesiones para exportar.");
   const header = [
-    "Fecha", "No. DN", "Empleado", "Unidad de Negocio",
+    "Fecha", "No. DN", "Empleado", "BU",
     "Hora Inicio", "Hora Fin", "Tiempo Activo", "Tiempo Pausa",
     "Unidades", "UPH Real", "UPH Estándar", "Eficiencia %", "Estado",
   ];
@@ -55,13 +55,14 @@ const exportarExcel = (sesiones, empleadoFiltro = null) => {
 
 // ─── DATOS INICIALES ──────────────────────────────────────────────────────────
 const AREAS_INIT = [
-  { id: "cal", label: "Calzado",    icon: "👟", color: "#E87C2E", uphEstandar: 120 },
-  { id: "tex", label: "Textil",     icon: "👕", color: "#4A90D9", uphEstandar: 200 },
-  { id: "acc", label: "Accesorios", icon: "👜", color: "#7B5EA7", uphEstandar: 150 },
+  { id: "cal", label: "Calzado",    icon: "👟", color: "#E87C2E", uphEstandar: 100 },
+  { id: "tex", label: "Textil",     icon: "👕", color: "#4A90D9", uphEstandar: 80 },
+  { id: "acc", label: "Equipo", icon: "👜", color: "#7B5EA7", uphEstandar: 120 },
 ];
 const EMPLEADOS_INIT = [
-  { id: "e1", nombre: "Juan García",  areaId: "cal", activo: true },
-  { id: "e2", nombre: "María López",  areaId: "tex", activo: true },
+  { id: "e1", nombre: "Jennifer Cahun",  areaId: "cal", activo: true },
+  { id: "e2", nombre: "Paula Tuz",  areaId: "tex", activo: true },
+  { id: "e3", nombre: "Alfredo Cedillo",  areaId: "tex", activo: true },
 ];
 const ADMIN_PIN = "1234";
 
