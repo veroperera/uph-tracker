@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 
 // ─── GOOGLE SHEETS ────────────────────────────────────────────────────────────
-const SHEETS_URL = "https://script.google.com/macros/s/AKfycbz0plBaTXyEgWp1aS2teQcp8C1jy_OP_pTPv5csE5I1sBTIMtsCE55d78KqPxhXgg9Xmw/exec";
+const SHEETS_URL = "https://script.google.com/macros/s/AKfycbw5yNLQF7UabDgJT6cuj4E0d8DGBSzgM57C-K8uXQ3yQc8F6BhekZmlHAoblZwxV7XMeA/exec";
 
 const guardarEnSheets = async (sesion) => {
   const fmtH = (ts) => ts ? new Date(ts).toLocaleTimeString("es-MX",{hour:"2-digit",minute:"2-digit",second:"2-digit"}) : "--";
@@ -778,4 +778,3 @@ export default function UPHApp() {
     </div>
   );
 }
-
